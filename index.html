@@ -39,7 +39,8 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                padding: 50px 0 0 0;
+                padding-top: 30px;
+                padding-bottom: 0px;
                 min-height: auto;
                 /* background-color: #f3f3f3; */
             }
@@ -53,7 +54,11 @@
                 padding-top: 80px;
                 width: 100%;
                 max-width: 950px;
-                min-height: 500px;
+                min-height: 550px;
+            }
+            .image-31 {
+                margin-top: -310px;
+                min-height: 550px;
             }
             img {
                 position: absolute;
@@ -65,31 +70,30 @@
             }
             .button {
                 display: inline-block;
+                padding-top: 20px;
             }
             .prevButton {
-                max-width: 170px;
+                /* max-width: 170px; */
                 padding: 10px 14px;
                 margin-left: 0px;
                 color: #fff;
-                text-transform: uppercase;
                 background-color: #9c27b0;
                 border: 0;
                 outline: 0;
-                border-radius: 0px;
+                border-radius: 10px;
                 box-shadow: none;
                 cursor: pointer;
                 text-decoration: none;
             }
             .nextButton {
-                max-width: 170px;
+                /* max-width: 170px; */
                 padding: 10px 14px;
                 margin-left: 0px;
                 color: #fff;
-                text-transform: uppercase;
                 background-color: #9c27b0;
                 border: 0;
                 outline: 0;
-                border-radius: 0px;
+                border-radius: 10px;
                 box-shadow: none;
                 cursor: pointer;
                 text-decoration: none;
@@ -99,7 +103,7 @@
     <body>
         <div class="gray-container">
             <div class="credit-container">
-                <h1>MetaphorVis Services</h1>
+                <h1>MetaphorVis Storytelling</h1>
                 <!-- <h2>Credits:</h2>
                 <h2>Hyoji Ha</h2>
                 <h2>Kwanghyuk Moon</h2>
@@ -108,9 +112,10 @@
                 <h2>Kyungwon Lee</h2> -->
             </div>
             <div class="button">
-                <a href="javascript:;" class="prevButton">Prev Image</a>
-                <a href="javascript:;" class="nextButton">Next Image</a>
+                <a href="javascript:;" class="prevButton">Prev</a>
+                <a href="javascript:;" class="nextButton">Next</a>
             </div>
+            <!-- <div>serviceUrl: https://hm00081.github.io/metaphorVis/</div> -->
             <div class="wrapper">
                 <img id="image-01" class="current" src="./images/1.jpg" alt="image-01" />
                 <img id="image-02" src="./images/2.jpg" alt="image-02" />
@@ -132,16 +137,19 @@
                 <img id="image-18" src="./images/18.jpg" alt="image-18" />
                 <img id="image-19" src="./images/19.jpg" alt="image-19" />
                 <img id="image-20" src="./images/20.jpg" alt="image-20" />
-                <img id="image-11" src="./images/21.jpg" alt="image-21" />
-                <img id="image-12" src="./images/22.jpg" alt="image-22" />
-                <img id="image-13" src="./images/23.jpg" alt="image-23" />
-                <img id="image-14" src="./images/24.jpg" alt="image-24" />
-                <img id="image-15" src="./images/25.jpg" alt="image-25" />
-                <img id="image-16" src="./images/26.jpg" alt="image-26" />
-                <img id="image-17" src="./images/27.jpg" alt="image-27" />
-                <img id="image-18" src="./images/28.jpg" alt="image-28" />
-                <img id="image-19" src="./images/29.jpg" alt="image-29" />
-                <img id="image-20" src="./images/30.jpg" alt="image-30" />
+                <img id="image-21" src="./images/21.jpg" alt="image-21" />
+                <img id="image-22" src="./images/22.jpg" alt="image-22" />
+                <img id="image-23" src="./images/23.jpg" alt="image-23" />
+                <img id="image-24" src="./images/24.jpg" alt="image-24" />
+                <img id="image-25" src="./images/25.jpg" alt="image-25" />
+                <img id="image-26" src="./images/26.jpg" alt="image-26" />
+                <img id="image-27" src="./images/27.jpg" alt="image-27" />
+                <img id="image-28" src="./images/28.jpg" alt="image-28" />
+                <img id="image-29" src="./images/29.jpg" alt="image-29" />
+                <img id="image-30" src="./images/30.jpg" alt="image-30" />
+                <a href="https://hm00081.github.io/metaphorVis/" target="_blank" rel="nonreferrer">
+                    <img class="image-31" src="./images/31.jpg" alt="image-31" />
+                </a>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

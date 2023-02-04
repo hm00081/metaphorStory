@@ -1,0 +1,27 @@
+{
+    "homepage": "https://hm00081.github.io/metaphorVisStoryTelling",
+    "name": "meta-story",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "start": "serve",
+        "build": "echo This is a static template, there is no bundler or bundling involved!",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hm00081"
+    },
+    "keywords": [],
+    "author": "Kwanghyuk Moon",
+    "license": "MIT",
+    "bugs": {},
+    "devDependencies": {
+        "serve": "^11.2.0"
+    },
+    "dependencies": {
+        "gh-pages": "^5.0.0"
+    }
+}

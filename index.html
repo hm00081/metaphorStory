@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>MetaphorVis Storytelling</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <style>
+            :root {
+                --animate-duration: 3s;
+                --animate-delay: 2s;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                font-size: 20px;
+                /* text-align: center; */
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                font-size: 10px;
+                color: rgb(97, 97, 97);
+                /* text-align: center; */
+                margin-bottom: 5px;
+            }
+
+            .gray-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 50px 0 0 0;
+                min-height: auto;
+                /* background-color: #f3f3f3; */
+            }
+            .credit-container {
+                display: block;
+            }
+            .wrapper {
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding-top: 80px;
+                width: 100%;
+                max-width: 950px;
+                min-height: 500px;
+            }
+            img {
+                position: absolute;
+                max-width: 100%;
+                display: none;
+            }
+            .current {
+                display: block;
+            }
+            .button {
+                display: inline-block;
+            }
+            .prevButton {
+                max-width: 170px;
+                padding: 10px 14px;
+                margin-left: 0px;
+                color: #fff;
+                text-transform: uppercase;
+                background-color: #9c27b0;
+                border: 0;
+                outline: 0;
+                border-radius: 0px;
+                box-shadow: none;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .nextButton {
+                max-width: 170px;
+                padding: 10px 14px;
+                margin-left: 0px;
+                color: #fff;
+                text-transform: uppercase;
+                background-color: #9c27b0;
+                border: 0;
+                outline: 0;
+                border-radius: 0px;
+                box-shadow: none;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gray-container">
+            <div class="credit-container">
+                <h1>MetaphorVis Services</h1>
+                <!-- <h2>Credits:</h2>
+                <h2>Hyoji Ha</h2>
+                <h2>Kwanghyuk Moon</h2>
+                <h2>Hyerim Joung</h2>
+                <h2>Hyegyeong Kim</h2>
+                <h2>Kyungwon Lee</h2> -->
+            </div>
+            <div class="button">
+                <a href="javascript:;" class="prevButton">Prev Image</a>
+                <a href="javascript:;" class="nextButton">Next Image</a>
+            </div>
+            <div class="wrapper">
+                <img id="image-01" class="current" src="./images/1.jpg" alt="image-01" />
+                <img id="image-02" src="./images/2.jpg" alt="image-02" />
+                <img id="image-03" src="./images/3.jpg" alt="image-03" />
+                <img id="image-04" src="./images/4.jpg" alt="image-04" />
+                <img id="image-05" src="./images/5.jpg" alt="image-05" />
+                <img id="image-06" src="./images/6.jpg" alt="image-06" />
+                <img id="image-07" src="./images/7.jpg" alt="image-07" />
+                <img id="image-08" src="./images/8.jpg" alt="image-08" />
+                <img id="image-09" src="./images/9.jpg" alt="image-09" />
+                <img id="image-10" src="./images/10.jpg" alt="image-10" />
+                <img id="image-11" src="./images/11.jpg" alt="image-11" />
+                <img id="image-12" src="./images/12.jpg" alt="image-12" />
+                <img id="image-13" src="./images/13.jpg" alt="image-13" />
+                <img id="image-14" src="./images/14.jpg" alt="image-14" />
+                <img id="image-15" src="./images/15.jpg" alt="image-15" />
+                <img id="image-16" src="./images/16.jpg" alt="image-16" />
+                <img id="image-17" src="./images/17.jpg" alt="image-17" />
+                <img id="image-18" src="./images/18.jpg" alt="image-18" />
+                <img id="image-19" src="./images/19.jpg" alt="image-19" />
+                <img id="image-20" src="./images/20.jpg" alt="image-20" />
+                <img id="image-11" src="./images/21.jpg" alt="image-21" />
+                <img id="image-12" src="./images/22.jpg" alt="image-22" />
+                <img id="image-13" src="./images/23.jpg" alt="image-23" />
+                <img id="image-14" src="./images/24.jpg" alt="image-24" />
+                <img id="image-15" src="./images/25.jpg" alt="image-25" />
+                <img id="image-16" src="./images/26.jpg" alt="image-26" />
+                <img id="image-17" src="./images/27.jpg" alt="image-27" />
+                <img id="image-18" src="./images/28.jpg" alt="image-28" />
+                <img id="image-19" src="./images/29.jpg" alt="image-29" />
+                <img id="image-20" src="./images/30.jpg" alt="image-30" />
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.nextButton').click(function () {
+                    var index = $('.current').index('img');
+                    var $li = $('img');
+                    // remove all active class
+                    $li.removeClass('current');
+                    // find the next li and add active class
+                    $li.eq((index + 1) % $li.length).addClass('current animate__animated animate__fadeIn');
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('.prevButton').click(function () {
+                    var index = $('.current').index('img');
+                    var $li = $('img');
+                    // remove all active class
+                    $li.removeClass('current');
+                    // find the next li and add active class
+                    $li.eq((index - 1) % $li.length).addClass('current animate__animated animate__fadeIn');
+                });
+            });
+        </script>
+    </body>
+</html>
